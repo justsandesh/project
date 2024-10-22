@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}E-commerce Website{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div >
+                    <a href="{% url 'index' %}" class="logo">
+                        <img src="{% static 'images/final_logo1.png' %}"  alt="RSS Light Supplier Logo" class="lprrr">
+                    </a>
+                </div>
+               
+                <div>
+                    <ul class="nav-links">
+                        <li><a href="{% url 'index' %}">Home</a></li>
+                        <li><a href="{% url 'contact' %}">Suggestions</a></li>
+                        <li><a href="{% url 'about' %}">About</a></li>
+                        
+                    </ul>
+
+                </div>
+        
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer>
+       
+        <p>&copy; 2024 RSS Light Supplier. All rights reserved.</p>
+    </footer>
+</body>
+</html>

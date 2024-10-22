@@ -1,0 +1,426 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif; /* Consistent font */
+    margin: 0;
+    padding: 0;
+    background-image: url('path/to/your/background-image.jpg'); /* Background image for body */
+    background-size: cover; /* Ensure the background image covers the entire viewport */
+    background-position: center; /* Center the background image */
+}
+
+/* Navbar */
+.navbar {
+    background-color: rgba(224, 79, 12, 0.85);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(10px); /* Frosted effect */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 0%;
+}
+.container{
+    display:inline-flex;
+}
+.next_image{
+    width: 25vw;
+    height: 25vw;
+    border-radius: 1vw;
+    margin-left: 5vw;
+    margin-top: 1vw;
+}
+.navbar .logo img {
+    height: 100px; /* Slightly larger logo */
+    transition: transform 0.3s ease;
+    margin-left: -5vw !important;
+
+}
+
+.navbar .logo img:hover {
+    transform: scale(1.2); /* Scale up slightly on hover */
+}
+#tnnn{
+    margin-left: 30vw !important;
+}
+
+.navbar .nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 20px; /* Increased spacing */
+    margin-top: 6vh  ;
+   margin-left: 20vw;
+}
+
+.navbar .nav-links li {
+    display: inline;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 12px 20px; /* Increased padding */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Hero Section for Home Page */
+h1 {
+    font-size: 2em; /* Increase the font size for a bold look */
+    text-align: center; /* Center the text */
+    font-weight: bold; /* Make the text bold */
+    background: linear-gradient(45deg, #ff0055, /* Bright Pink */
+    #ffcc00, /* Bright Yellow */
+    #33ff33, /* Bright Green */
+    #00ccff, /* Bright Cyan */
+    #ff0055, /* Bright Pink */
+    #ff007f, /* Deep Pink */
+    #ff8c00, /* Orange */
+    #ffff00, /* Bright Yellow */
+    #00ff7f, /* Spring Green */
+    #0080ff, /* Light Blue */
+    #8000ff, /* Purple */
+    #ff00ff, /* Magenta */
+    #ff4500, /* Orange Red */
+    #ffa500  /* Light Orange */);
+    background-clip: text; /* Clip the background to the text */
+    -webkit-background-clip: text; /* For Safari */
+    color: transparent; /* Make the text color transparent */
+    animation: glowingText 3s ease-in-out infinite; /* Animation for glowing effect */
+}
+
+/* Keyframes for glowing text effect with shifting colors */
+@keyframes glowingText {
+    0% {
+        text-shadow: 
+            0 0 20px rgba(255, 0, 85, 1), 
+            0 0 30px rgba(255, 204, 0, 1), 
+            0 0 40px rgba(51, 255, 51, 1), 
+            0 0 50px rgba(0, 204, 255, 1);
+    }
+    25% {
+        text-shadow: 
+            0 0 25px rgba(255, 85, 0, 1), 
+            0 0 35px rgba(204, 255, 0, 1), 
+            0 0 45px rgba(0, 255, 127, 1), 
+            0 0 60px rgba(0, 255, 255, 1);
+    }
+    50% {
+        text-shadow: 
+            0 0 30px rgba(255, 0, 255, 1), 
+            0 0 40px rgba(255, 85, 85, 1), 
+            0 0 50px rgba(0, 255, 85, 1), 
+            0 0 70px rgba(85, 0, 255, 1);
+    }
+    75% {
+        text-shadow: 
+            0 0 35px rgba(0, 0, 255, 1), 
+            0 0 50px rgba(0, 127, 255, 1), 
+            0 0 60px rgba(127, 0, 255, 1), 
+            0 0 80px rgba(255, 0, 170, 1);
+    }
+    100% {
+        text-shadow: 
+            0 0 40px rgba(255, 170, 0, 1), 
+            0 0 55px rgba(255, 0, 0, 1), 
+            0 0 70px rgba(0, 255, 0, 1), 
+            0 0 90px rgba(0, 0, 255, 1);
+    }
+}
+
+
+/* Product List Styles */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 3rem auto;
+    max-width: 1200px;
+    padding: 0 1rem;
+}
+
+.product {
+    background: white;
+    padding: 20px;
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}
+
+.product img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Ensures image does not stretch */
+    border-radius: 10px; /* More rounded image corners */
+}
+
+.product h2 {
+    color: #333;
+    margin: 0.5rem 0;
+    font-size: 1.5rem; /* Increased title size */
+}
+
+.product p {
+    color: #666;
+    margin: 10px 0;
+}
+
+/* Order Button Styles */
+.order-btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 12px 25px; /* Increased padding */
+    border-radius: 8px; /* More rounded button */
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.order-btn:hover {
+    background-color: red;
+    color: white;
+    transform: translateY(-2px); /* Lift effect on hover */
+    text-decoration: none;
+}
+
+/* Form Styles */
+form {
+    max-width: 600px;
+    
+    background: rgba(255, 255, 255, 0.8); /* Lighter transparent effect */
+    backdrop-filter: blur(15px); /* Enhanced frosted glass effect */
+    border-radius: 15px;
+    
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-left: 10vw !important;
+   
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 15px; /* Increased padding for better touch area */
+    margin: 10px 0;
+    border: none;
+    background-color: rgba(46, 35, 35, 0.85);
+    border-radius: 8px;
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transition for input focus */
+    color: #d93a00;
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 1);
+    border: 2px solid #007bff; /* Highlighting on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Shadow on focus */
+}
+.inst{
+    width: 10vw;
+    height: 100vh;
+    margin-top: 5vw;
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 25px; /* Increased padding */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Transition for hover */
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+}
+
+footer p {
+    margin: 0;
+}
+.mkr{
+    display: inline-flex;
+}
+.mkr p{
+    color: red;
+    font-size: 1vw;
+    margin-right: 7vw;
+}
+.hee{
+    text-align: center;
+}
+.frm_inline{
+    display: inline-flex;
+    gap: 10vw;
+}
+
+
+#contact {
+    background-color: #f8f9fa;
+    padding: 3rem 1rem;
+}
+
+#contact h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+#contact h5 {
+    font-size: 1.2rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.contact-box {
+    display: inline-flex;
+    
+    gap:4rem;
+}
+.contact-box {
+    width: 10vw;
+    height: 10vw;
+    
+    margin-left: 10vw;
+}
+#contact{
+    margin-bottom: 2vw !important;
+    margin-top: 10vw !important;
+}
+
+/* Contact Item Styling */
+.contact-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Ensures no underline */
+    padding: 1.5rem 2rem;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    max-width: 320px;
+    width: 100%;
+    color: #333; /* Text color inside contact-item */
+    border: 2px solid transparent;
+    cursor: pointer;
+    text-align: left;
+}
+
+.contact-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    border-color: #e04f0c; /* Adding a slight border color on hover */
+}
+
+.contact-icon {
+    width: 5vw;
+    height: 5vw;
+    margin-right: 1.5rem;
+}
+
+.contact-info {
+    flex-grow: 1;
+}
+
+.contact-info h5 {
+    font-size: 1.2rem;
+    color: #e04f0c; /* Primary color */
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    color: #555;
+    margin: 0.2rem 0 0;
+    letter-spacing: 0.2px;
+    transition: color 0.3s ease-in-out;
+}
+
+.contact-item:hover .contact-info h5 {
+    color: #d93a00; /* Slight change on hover */
+}
+
+.contact-item:hover .contact-info p {
+    color: #333; /* Make text darker on hover */
+}
+.lprrr{
+    margin: 0% !important;
+    padding: 0% !important;
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .contact-box {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    #contact h1 {
+        font-size: 2rem;
+    }
+
+    #contact h5 {
+        font-size: 1.1rem;
+    }
+
+    .contact-item {
+        max-width: 90%;
+    }
+}
+
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1rem; /* Reduce padding on smaller screens */
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .product-list {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    h1 {
+        font-size: 2rem; /* Adjust heading size */
+    }
+}

@@ -1,0 +1,47 @@
+    {% extends 'shop/templates/index.html' %}
+
+    {% block title %}Order {{ product.name }}{% endblock %}
+
+    {% block content %}
+    <h1>Order {{ product.name }}</h1>
+    <div class="frm_inline">
+        
+        <div>
+            
+            {% for image in product.images.all %}
+                        <img src="{{ image.image.url }}" alt="{{ product.name }}" class="next_image">
+            {% endfor %}
+           
+            <br>
+        </div>
+
+
+        <div class="inst">
+         <p>{{ product.description }}</p>
+        </div>
+    <!-- Order Form -->
+        <div>
+            <form method="POST" >
+                {% csrf_token %}
+                <label for="name">Name of your's:</label>
+                <input type="text" id="name" name="name" required>
+                <br>
+
+                <label for="address">Address to deliver:</label>
+                <input type="text" id="address" name="address" required></input>
+                <br>
+
+                <label for="quantity">Quantity you want or in your expectations:</label>
+                <input type="number" id="quantity" name="quantity" min="1" value="1" required>
+                <br>
+
+                <label for="contact_no">Contact No. to communicate:</label>
+                <input type="text" id="contact_no" name="contact_no" required>
+                <br>
+
+                <button type="submit" class="submit-btn">Order Now</button>
+            </form>
+        </div>
+    </div>
+
+    {% endblock %}

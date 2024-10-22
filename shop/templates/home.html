@@ -1,0 +1,28 @@
+{% extends 'shop/templates/index.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h1>Welcome  to RSS Light Suppliers</h1>
+
+<div class="product-list">
+    {% for product in products %}
+        <div class="product">
+            <h2 class="hee">{{ product.name }}</h2>
+            <br>
+            
+            {% for image in product.images.all %}
+                <img src="{{ image.image.url }}" alt="{{ product.name }}" class="product-image">
+                <br>
+            {% endfor %}
+        
+            <br>
+            <div class="mkr">
+            <p>Price: ${{ product.price }}</p>
+            <a href="{% url 'create_order' product.id %}" class="order-btn">Order Now</a>
+            
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
